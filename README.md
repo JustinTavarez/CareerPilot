@@ -1,32 +1,128 @@
-# React + TypeScript + Vite
+# CareerPilot
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+CareerPilot is an AI-powered career management platform designed to help job seekers organize their job search, prepare for interviews, and improve their chances of landing their next role.
 
-Currently, two official plugins are available:
+Instead of relying on spreadsheets, bookmarks, and multiple websites, CareerPilot brings everything into one place.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Authentication
 
-## Expanding the Oxlint configuration
+- User registration
+- Secure login
+- JWT authentication
+- Protected routes
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Job Tracker
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- Save job postings
+- Track application status
+- Add interview dates
+- Store recruiter information
+- Personal notes
+- Resume version tracking
+
+### AI Resume Analysis
+
+- Compare resume against job descriptions
+- Identify missing skills
+- Resume match percentage
+- Suggestions for improvement
+
+### AI Interview Preparation
+
+- Generate interview questions from job descriptions
+- Behavioral interview practice
+- Technical interview preparation
+- Personalized feedback
+
+### Dashboard
+
+- Total applications
+- Interview count
+- Offer count
+- Rejection tracking
+- Response rate
+- Progress charts
+
+### Study Recommendations
+
+CareerPilot analyzes interview performance and recommends topics to improve.
+
+---
+
+## Tech Stack
+
+Frontend
+
+- React
+- TypeScript
+- Tailwind CSS
+
+Backend
+
+- Spring Boot
+- Java
+
+Database
+
+- PostgreSQL
+
+Authentication
+
+- Spring Security
+- JWT
+
+AI
+
+- OpenAI API
+
+Deployment
+
+- Docker
+- GitHub Actions
+
+---
+
+## Project Structure
+
+```
+careerpilot/
+│
+├── frontend/
+├── backend/
+├── database/
+├── docs/
+└── README.md
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## Future Features
+
+- Resume Builder
+- LinkedIn Integration
+- GitHub Integration
+- AI Career Coach
+- Salary Tracking
+- Offer Comparison
+- Calendar Sync
+- Email Notifications
+- Chrome Extension
+- Mobile App
+
+---
+
+## Why I Built This
+
+Applying for jobs often means managing information across multiple websites and documents. CareerPilot brings the entire process into one application and adds AI-powered tools that help users prepare for interviews and improve their applications.
+
+The goal is to make the job search more organized, efficient, and personalized.
+
+---
+
+## License
+
+MIT License
