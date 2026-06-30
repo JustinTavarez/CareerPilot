@@ -22,7 +22,7 @@ export default function Login() {
       setError(error.message)
       return
     }
-    navigate('/')
+    navigate('/dashboard')
   }
 
   return (

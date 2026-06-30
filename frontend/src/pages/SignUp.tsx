@@ -35,7 +35,7 @@ export default function SignUp() {
     }
     // When email confirmation is on, there's no active session yet.
     if (data.session) {
-      navigate('/')
+      navigate('/dashboard')
     } else {
       setMessage('Check your inbox to confirm your email, then sign in.')
     }
