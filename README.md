@@ -91,12 +91,36 @@ Deployment
 ```
 careerpilot/
 │
-├── frontend/
-├── backend/
-├── database/
-├── docs/
+├── frontend/        # React + TypeScript + Vite app (the landing page lives here)
+│   ├── src/         # components, pages, lib/supabase.ts
+│   ├── .env.local   # your Supabase URL + anon key (gitignored)
+│   └── .env.example # template for the above
+│
+├── backend/         # server-side code & secrets (service_role key, OpenAI key)
+│   ├── .env.example
+│   └── README.md
+│
 └── README.md
 ```
+
+---
+
+## Getting Started
+
+### Frontend
+
+```bash
+cd frontend
+npm install          # first time only
+cp .env.example .env.local   # then fill in your Supabase values
+npm run dev          # http://localhost:5173
+```
+
+### Backend
+
+The `backend/` folder is a placeholder — add your stack of choice there. See
+`backend/README.md` for details. Keep all privileged secrets (service_role key,
+OpenAI key) in `backend/.env`, never in the frontend.
 
 ---
 
