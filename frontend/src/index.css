@@ -1339,31 +1339,69 @@ h3 {
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 56px 24px 80px;
-  background:
-    radial-gradient(60% 60% at 50% -10%, var(--bg-soft), transparent 70%),
-    var(--bg);
+  justify-content: flex-end;
+  padding: 56px 80px 80px;
+  background-image: url('./assets/CareerPilot_Login.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 720px) {
+  .auth-wrap {
+    justify-content: center;
+    padding: 56px 24px 80px;
+  }
 }
 
 .auth-card {
   width: 100%;
-  max-width: 440px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  padding: 38px 36px 32px;
+  max-width: 420px;
+  margin-right: 4%;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 22px;
+  box-shadow:
+    0 24px 60px -18px rgba(30, 50, 110, 0.32),
+    0 4px 14px -6px rgba(30, 50, 110, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  padding: 42px 40px 34px;
+  animation: auth-card-in 0.6s cubic-bezier(0.21, 0.9, 0.32, 1) both;
+}
+
+@keyframes auth-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 720px) {
+  .auth-card {
+    margin-right: 0;
+    background: rgba(255, 255, 255, 0.92);
+  }
 }
 
 .auth-head {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .auth-head h1 {
-  font-size: 28px;
+  font-size: 30px;
+  letter-spacing: -0.02em;
   margin-bottom: 8px;
+  background: linear-gradient(120deg, var(--navy), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .auth-head p {
@@ -1394,10 +1432,10 @@ h3 {
   font-family: var(--sans);
   font-size: 15px;
   color: var(--navy);
-  padding: 12px 14px;
-  border: 1px solid var(--border-strong);
-  border-radius: 12px;
-  background: var(--bg-alt);
+  padding: 13px 15px;
+  border: 1px solid rgba(150, 165, 200, 0.5);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.7);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
